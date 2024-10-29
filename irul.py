@@ -1,8 +1,11 @@
 
-A = [2, 2, 1, 3, 5, 5, 5, 7, 2, 10]
-A.sort() 
-u = int(input("Masukkan nilai u yang ingin dicari: "))
+print("Nama: Tanwirul Muttaqin")
+print("NIM: F55123083\n")
 
+
+A = [2, 2, 1, 3, 5, 5, 5, 7, 2, 10]
+A.sort()  
+u = int(input("Masukkan nilai u yang ingin dicari: "))
 
 def binary_search_first(A, u):
     left, right = 0, len(A) - 1  
@@ -21,7 +24,7 @@ def binary_search_first(A, u):
 def binary_search_last(A, u):
     left, right = 0, len(A) - 1  
     result = -1  
-    while left <= right: 
+    while left <= right:  
         mid = (left + right) // 2  
         if A[mid] == u:
             result = mid  
@@ -29,7 +32,7 @@ def binary_search_last(A, u):
         elif A[mid] < u:
             left = mid + 1  
         else:
-            right = mid - 1 
+            right = mid - 1  
     return result  
 
 first_index = binary_search_first(A, u)  
